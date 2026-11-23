@@ -16,22 +16,24 @@ function App() {
 
   return (
     <>
-      <h1>Restaurant Menu</h1>
+      <h1 className="heading">Restaurant Menu</h1>
 
-      <button onClick={() => setCategory("All")}>All</button>
-      <button onClick={() => setCategory("Veg")}>Veg</button>
-      <button onClick={() => setCategory("Non-Veg")}>Non-Veg</button>
+      <div className="buttons">
+        <button onClick={() => setCategory("All")}>All</button>
+        <button onClick={() => setCategory("Veg")}>Veg</button>
+        <button onClick={() => setCategory("Non-Veg")}>Non-Veg</button>
+      </div>
 
-      {
-        filteredMenu.map((item) => (
+      <div className="menu-container">
+        {filteredMenu.map((item) => (
           <MenuItem
             key={item.id}
             name={item.name}
             price={item.price}
             category={item.category}
           />
-        ))
-      }
+        ))}
+      </div>
     </>
   )
 }

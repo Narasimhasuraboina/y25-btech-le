@@ -1,10 +1,12 @@
+
 const MenuItem = (props) => {
     return (
-        <>
-            <h2> Name: {props.name}</h2>
-            <h2>Category:{props.category}</h2>
-            <h3>Price: {props.price}</h3>
-        </>
+        <div className="menu-card">
+            <h2>{props.name}</h2>
+            <p>Category: {props.category}</p>
+            <h3>₹{props.price}</h3>
+        </div>
     )
 }
+
 export default MenuItem;
